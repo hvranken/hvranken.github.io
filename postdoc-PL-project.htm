@@ -1,0 +1,104 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Harald Vranken - Research</title>
+<link rel="stylesheet" type="text/css" media="screen,projection" href="style.css" />
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<table id="table1" bordercolordark="#000000" bordercolorlight="#FFFFFF" height="200"  border: 1px solid black;  border-collapse: collapse;>
+<tr>
+<td style="nowrap; vertical-align: top;">
+<ul style="list-style-type: none; margin: 0; padding: 0; text-align:left; color: #000000">
+<li><h5><a href="index.htm">Home</h5></li>
+<li><h5><a href="contact.htm">Contact</a></h5></li>
+<li><h5><a href="curriculum_vitae.htm">Curriculum Vitae</a>&emsp;&emsp;</h5></li>
+<li><h5><a href="onderwijs.htm">Teaching</a></h5></li>
+<li><h5><a href="onderzoek.htm" style="color: red;">Research</a></h5></li>
+<li><h5><a href="publicaties.htm">Publications</a></h5></li>
+</ul>
+</td>
+<td style="nowrap; vertical-align: top;">
+<h2 style="color: red;">Postdoc-project description</h2><br>
+<p>Ashish Rajendra Kumar Sai is working as postdoc at the Open Universiteit since April 2022 on the 'Econsensus-project' that addresses the environmental footprint of distributed systems that apply consensus mechanisms. The postdoc-position is supported by a research grant from Protocol Labs. Below is the project plan as created at the start of the project.</p>
+
+<h2>Summary</h2>
+<p><i>The environmental footprint of distributed systems that apply consensus mechanisms, is causing great concern. Prime examples of such systems are cryptocurrencies (eg., Bitcoin, Ethereum, and Filecoin) and distributed storage systems (eg., Filecoin). The goal of the research project is to quantify and reduce the environmental footprint, including both the energy consumption and other environmental impacts such as the hardware lifecycle, of a selected set of systems. Our overarching goals are threefold: (1) to create models for estimating the size of the environmental footprint, (2) to provide methods for measuring this footprint, and (3) to provide mitigation methods for reducing this footprint. By modelling and measuring we will be able to demonstrate and predict the impact on our environment. This will raise awareness, inform tool development, and enable incentives to actually deploy our mitigation methods for reducing the footprint. Our research helps to address important societal challenges like global warming, climate change, and spare use of scarce sources. We intend to publish scientific papers on our modelling and measurement efforts, to create online dashboards, and to promote our mitigating controls for integration and application in distributed systems.</i></p>
+
+<h2>Project overview</h2>
+<p>The project covers three topics: modelling, measuring, and mitigating the energy consumption and the environmental footprint of distributed systems that apply consensus mechanisms. In modelling, we intend to create accurate models that can be used to estimate historical and future energy consumption, GHG emissions, and hardware life cycles. In measuring, we intend to provide means that allow actual measurements, also to validate our models. In mitigating, we intend to provide actual controls for reducing the environmental footprint, particularly by enforcing verifiable use of green energy sources.</p>
+
+<h3><i>Modelling</i></h3>
+<p>There is a pressing need for accurate models to estimate the electricity consumption and the environmental footprint. Such models should cover historical developments, estimate the current situation, and make short-term predictions for the future. We consider both top-down and bottom-up approaches for creating models.</p>
+<p>The bottom-up approach is to find out where the nodes (miners) in the distributed system that are involved in providing proofs for the consensus mechanism, are located geographically. In addition, data is gathered on how much resources (like compute power or storage capacity) they contribute, what hardware they use, and what energy mix is used to produce the electricity consumed. By combining the data of individual nodes, a global estimate is derived about the total electricity consumption and the energy mix involved, from which subsequent estimates can be derived on GHG emissions, and the hardware life cycles.</p>
+<p>The top-down approach is to analyse consensus mechanisms from which models and associated parameters (like difficulty) on the required resources can be derived. For instance, the global hash rate of PoW-systems can be estimated accurately by statistical models. By considering various distributions of geographical distribution of nodes, hardware usage, and energy mix, models can be derived for the lower and upper bounds of electricity consumption and environmental footprint, and estimates can be made for likely scenarios. By combining a top-down and bottom-up approach, estimates of the most realistic scenarios can be derived.</p>
+<p>In summary, we intend to derive models from analysing a set of consensus algorithms and the resources they take when executing, and to complete these models with data (see next section).</p>
+
+<h3><i>Measuring</i></h3>
+<p>As stated, it is important to obtain accurate information about the actual values of parameters in the models. For instance for bitcoin, many researchers have taken a bottom-up modelling approach, but did not succeed in obtaining reliable data. We have noticed a lack of scientific rigor in several papers that are not transparent about data sources or (re)use inaccurate and incomplete data sources. Also, there is little scientific literature on hardware use.</p>
+<p>We intend to improve on this by obtaining data from scientific and grey literature, from contacting miners and hardware manufacturers, and from actual measurements. Measurements may include techniques like IP geolocation with triangulation and analysing data from mining pools to locate miners, measuring the actual energy efficiency of hardware and life cycle assessments, and by improving consensus mechanisms with measurement controls. In particular, we intend to track the usage of green energy sources.</p>
+
+<h3><i>Mitigating</i></h3>
+<p>Our modelling and measuring efforts intend to provide realistic figures on the environmental footprint. This will increase awareness that actions are required to reduce this environmental footprint, which gives incentive for actually implementing mitigation measures.
+An example of a mitigation measure is to slightly improve PoW-algorithms. We foresee the possibility that miners add a proof that they mined a block using x% of green or renewable energy, for instance by referring to renewable energy certificates. A block is then only accepted on the blockchain if this x% is above some threshold. The approach here is not to come up with a completely new PoW-algorithm, but rather extending or slightly modifying the current ones, also to facilitate adoption. This will not cause the electricity consumption to go down, but it can at least be shown that x% of the energy used to produce electricity stems from renewable sources. Key challenges here are how to get reliable proofs of renewable energy usage, and how to integrate this into the current consensus algorithms.</p>
+
+<h2>Research team</h2>
+<p>The research will be carried out by a research team that is composed of a postdoctoral researcher, Alan Ransil, and Harald Vranken. The postdoc is the primary active researcher. Ransil and Vranken will act as steering committee members and sparring partners in discussions, and also contribute to programming, building models, gathering data, running experiments, and establishing contacts with the scientific community and stakeholders. The team may occasionally be extended with master students at the Open University or the Radboud University in the Netherlands, to work on well-defined topics from this research proposal. We will be in close contacts with Protocol Labs.</p>
+
+<h2>Research method</h2>
+<p>The project has a duration of two years. We envision how current developments that address the environmental footprint of distributed systems with consensus algorithms will evolve in the coming years, and aim at getting well ahead of these developments. We intend to do so partly by participating in ongoing innovative projects, and partly by exploring completely new directions.</p>
+
+<p>We intend to start with a brief exploration of different consensus mechanisms, and select certain distributed systems in which they are applied. We will consider a small number of cryptocurrencies with different consensus algorithms, Filecoin as an example of a distributed storage system, and possibly a few additional systems.</p>
+
+<p>For modelling, we intend to use the following methods and tools:</p>
+<ul>
+<li>Analyse the selected consensus algorithms in depth and derive parameterized models for the resources required to execute these algorithms (like compute power and storage capacity).</li>
+<li>Analyse hardware used for running the consensus algorithms and model their electricity consumption. This includes dedicated hardware (eg., as used in hash-based PoW-systems), as well as general-purpose hardware.</li>
+<li>Analyse the operation of distributed systems that apply the consensus mechanisms (eg., modelling the required hash rate), and considering their context (eg., operating from a data center with low PUE or locally).</li>
+<li>Consider data sources from various organizations on the environmental footprint of electricity consumption and production (eg., International Energy Agency).</li>
+<li>Combine the results of the above analyses to create models for electricity consumption and corresponding environmental footprint, and comparisons to existing technologies such as data centers.</li>
+<li>Analyse the environmental footprint of the hardware supply chain, considering the complete life cycle. Hardware manufactures like Seagate already publish product Life Cycle Assessments (LCAs) considering raw material acquisition and pre-processing, product assembly, distribution, end of life, and recycling of hard disks. We intend to create models including LCAs of all the hardware involved in systems that run the consensus algorithms.</li>
+</ul>
+
+<p>For measuring, we intend to use the following methods and tools:</p>
+<ul>
+<li>Measure electricity consumption of hardware resources used for executing consensus algorithms. This can be done by running the hardware in our lab environment, or by contacting miners. State-of-the-art is to rely on manufacturer models for electricity consumption, but we have clear signs that this may differ substantially from actual electricity consumption in the field because operating conditions differ and hardware configurations are optimized (eg., by clock frequency and supply voltage scaling).</li>
+<li>To support a bottom-up approach, we measure the location of miners and how much resources they contribute. For measuring location, we may include techniques like IP geolocation with triangulation. We may introduce a blockchain-based system where miners can register their location and hardware together with certain proofs.</li>
+<li>Measure the energy sources used for powering distributed systems with consensus mechanisms. This is a key activity. State-of-the-art is that several projects have started to look into this. A prominent example is the green hashrate program for cryptocurrencies of the Crypto Climate Accord , where the approach is to run measurements locally on the hardware operated by miners to measure electricity consumption and to track and verify the power companies that provide electricity; by also integrating these power companies, the energy mix used for electricity production is derived. This data is also published in real time. We may apply a similar approach for other distributed systems, in particular for Filecoin.
+We also will consider alternative approaches. Examples are to let miners buy renewable energy certificates and to store proofs of having done so in either a separate registration blockchain (which may also be used for registration of location and hardware) or in the blockchain of the actual distributed system.</li>
+<li>Tracking the hardware life cycle. We will explore setting up a blockchain-based system where stakeholders in the hardware life cycle can register proofs of events in the hardware life cycle. From this system, the life cycle can be tracked to support LCAs.</li>
+<li>Other important aspect to consider are privacy and anonymity of miners, and secrecy of stored sensitive data, which should not be broken when introducing mechanisms to continuously publish measurements or to track usage of renewable energy sources.</li>
+</ul>
+
+<p>For mitigating, we intend to use the following methods and tools:</p>
+<ul>
+<li>In the above we proposed methods to actually measure the usage of renewable energy, using either local measurements, a separate blockchain for registering metadata, or the blockchain of the actual distributed system. This can be enhanced with controls such that only those blocks are actually added to the blockchain that have been obtained by using an energy mix in which the fraction of renewable energy is guaranteed to exceed some lower bound. In distributed storage systems like Filecoin, the proofs for usage of renewable energy can feed into a reputation system, where the reputation of individual storage providers is derived by the amount of renewable energy applied. When retrieving information from Filecoin, clients can prefer nodes with a higher reputation (ie., better usage of renewable energy).</li>
+<li>Mitigation strategies for hardware. We will look into strategies to increase hardware lifetime when applied for consensus algorithms and to assess recycling strategies.</li>
+</ul>
+
+<h2>Objectives and deliverables</h2>
+<p>Our first objective is to create validated models, that can be used to raise awareness and incentives for mitigation measures. Our second objective is to actually build systems that implement our measuring and mitigation controls, show that they work, check with stakeholders whether they can be acceptable, and get people to use them. (We are aware that the latter two aims are very ambitious, and most likely need much more effort than can be addressed in this research proposal.) For dissemination, we foresee to align with ongoing initiatives, like the Crypto Climate Accord for cryptocurrencies, the Energy Web for renewable energy certificates, and Protocol Labs for Filecoin.</p>
+
+<p>We intend to deliver the following:</p>
+<ul>
+<li>We intend to make our models and data available as open source.</li>
+<li>We intend to publish scientific papers on our modelling and measurement efforts. While the topics of these papers may change as the research progresses, potential papers include Filecoin environmental impact model and methodology, estimation methods for different systems, comparisons to data centers, hardware use, and environmental mitigation strategies.</li>
+<li>We intend to create online dashboards for various cryptocurrencies and distributed systems, where the current electricity consumption and environmental footprint is shown (somewhat similar as CBECI currently is offering for bitcoin). The back-end of this dashboards implements our models and data. Users may control values of certain parameters on the dashboard to explore different scenarios.</li>
+<li>Our ultimate goal is to actually get our mitigating controls integrated and applied in distributed systems, which will reduce the environmental footprint of these systems. We are aware that this is a very ambitious goal that we cannot fully reach within this research project, but at least we intend to make a significant contribution for advancing towards it.</li>
+</ul>
+
+</td>
+<td style="vertical-align: top;">
+<p align="center"><img border="0" src="hvr.jpg" width="135" height="200"></p></td>
+</tr>
+</table>
+<p align="center" style="margin-top: -12px">&nbsp;</p>
+
+<h2>&nbsp;</h2>
+
+</body>
+
+</html>
